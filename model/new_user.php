@@ -1,52 +1,52 @@
 <?php
 
-    if ( !isset( $_POST["username"] ) || empty( trim( $_POST["username"] ) ) )
-    {
-        die("Username is required.");
-    }
-    else if ( strlen( trim( $_POST["username"] ) ) < 3 || strlen( trim( $_POST["username"] ) ) > 32 )
-    {
-        die("Username needs to have minimum 4 characters and maximum 32.");
-    }
-
-    if ( !isset( $_POST["email"] ) )
-    {
-        die("Email is required.");
+    if (
+        !isset($_POST["username"]) || empty($_POST["username"]) ||
+        !isset($_POST["email"]) || empty($_POST["email"]) ||
+        !isset($_POST["password"]) || empty($_POST["password"]) ||
+        !isset($_POST["confirm_password"]) || empty($_POST["confirm_password"])
+    ) {
+        die("All fields are required");
     }
 
-    if ( !isset( $_POST["password"] ) || empty( trim( $_POST["password"] ) ) )
-    {
-        die("Password is required.");
-    }
-    else if ( strlen( trim( $_POST["password"] ) ) < 5 || strlen( trim( $_POST["password"] ) ) > 64 )
-    {
-        die("Password needs to have minimum 7 characters and maximum 64.");
+    $username = trim($_POST["username"]);
+    $email = trim($_POST["email"]);
+    $password = trim($_POST["password"]);
+    $confirm_password = trim($_POST["confirm_password"]);
+
+    if (strlen($username) < 2 || strlen($username) > 20) {
+        die("Username must have at least 2 and maximum 20 characters");
+
+    } else if (strlen($password) < 5) {
+        die("Password must have at least 5 characters.");
+
+    } else if ($confirm_password !== $password) {
+        die("Passwords do not match");
     }
 
-    if ( !isset( $_POST["conf_password"] ) || empty( trim( $_POST["password"] ) ) )
-    {
-        die("Please confirm your password.");
-    }
-    else if ( $_POST["password"] != $_POST["conf_password"] )
-    {
-        die("Passwords do not match.");
-    }
-
-    $username = trim( $_POST["username"] );
-    $email = trim( $_POST["email"] );
-    $password = password_hash( $_POST["password"], PASSWORD_BCRYPT );
+    $hash_password = password_hash($password, PASSWORD_BCRYPT);
 
     require_once "database.php";
-    $username_exist = $database->query( " SELECT * FROM users WHERE username = '$username' " );
-    $email_exist = $database->query( " SELECT * FROM users WHERE email = '$email' " );
 
-    if ( $username_exist->num_rows == 1 )
-    {
-        die("{$username} is already taken!");
-    }
-    else if ( $email_exist->num_rows == 1 )
-    {
-        die("There is already a user with this email.");
+    $check_username = $database->query("SELECT * FROM users WHERE username = '$username'");
+    if ($check_username->num_rows > 0) {
+        die("Username already exists");
     }
 
-    $database->query( " INSERT INTO users ( username, email, password ) VALUES ( '$username', '$email', '$password' ) " );
+    $check_email = $database->query("SELECT * FROM users WHERE email = '$email'");
+    if ($check_email->num_rows > 0) {
+        die("There is already an user with this email");
+    }
+
+    $database->query("INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hash_password')");
+
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+    $_SESSION["username"] = $username;
+
+    $result = $database->query("SELECT id FROM users WHERE username = '$username'");
+    $user = $result->fetch_assoc();
+    $_SESSION["id"] = $user["id"];
+
+    header("Location: ../view/index.php");

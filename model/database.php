@@ -1,3 +1,3 @@
 <?php
 
-    $database = mysqli_connect( "localhost", "root", "", "web_shop" );
+    $database = mysqli_connect("localhost", "root", "", "web_shop");

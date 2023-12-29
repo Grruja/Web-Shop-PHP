@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Web-Shop-PHP" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2244eee7-473b-4f0d-bf97-a60cefbbf689" name="Default Changelist" comment="" />
+    <list default="true" id="2244eee7-473b-4f0d-bf97-a60cefbbf689" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/model/add_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/all_products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/cart_page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/create_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/product_page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/login_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/login_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/new_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/new_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +45,11 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2MugzcfI5RuVL3XeAop6NtvXXPY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,7 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../obuka/cas_16" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -30,20 +69,51 @@
       <updated>1678623144467</updated>
       <workItem from="1678623145505" duration="10650000" />
       <workItem from="1678702589901" duration="203000" />
+      <workItem from="1678703463468" duration="44000" />
+      <workItem from="1678787524106" duration="1360000" />
+      <workItem from="1681928603051" duration="54000" />
+      <workItem from="1681928679472" duration="1044000" />
+      <workItem from="1681996948632" duration="532000" />
+      <workItem from="1685807973342" duration="9022000" />
+      <workItem from="1685836041714" duration="19000" />
+      <workItem from="1685892263242" duration="411000" />
+      <workItem from="1685905867576" duration="6514000" />
+      <workItem from="1685956941918" duration="438000" />
+      <workItem from="1686044754490" duration="2524000" />
+      <workItem from="1686133031392" duration="102000" />
+      <workItem from="1687256352078" duration="2568000" />
+      <workItem from="1687314103546" duration="1565000" />
+      <workItem from="1687395322230" duration="7910000" />
+      <workItem from="1687482211035" duration="1448000" />
+      <workItem from="1692606085215" duration="237000" />
+      <workItem from="1695942424656" duration="59000" />
+      <workItem from="1696721884935" duration="1602000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1678633572167">
+    <state x="260" y="278" key="FileChooserDialogImpl" timestamp="1692606322182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1678633572167" />
-    <state x="314" y="447" key="NewPhpFileDialog" timestamp="1678625615098">
+    <state x="260" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1692606322182" />
+    <state x="314" y="447" key="NewPhpFileDialog" timestamp="1687400918290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="314" y="447" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1678625615098" />
+    <state x="314" y="447" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1687400918290" />
   </component>
 </project>
